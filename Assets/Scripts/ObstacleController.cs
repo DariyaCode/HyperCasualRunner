@@ -18,7 +18,6 @@ public class ObstacleController : MonoBehaviour
     {
         //one of to move the obstacles
         //transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
-
         transform.position += Vector3.left * moveSpeed * Time.deltaTime;
 
         if(transform.position.x < -10f){
