@@ -31,9 +31,10 @@ public class PlayerController : MonoBehaviour
         if(collision.gameObject.tag == "Obstacle")
         {
             //restart lvl
-
             //SceneManager.LoadScene("Game");
-            GameManager.instance.GameOver();
+            //GameManager.instance.GameOver();
+
+            GameManager.instance.UpdateLives();
         }
     }
 }
