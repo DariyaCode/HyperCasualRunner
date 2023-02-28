@@ -38,6 +38,33 @@ public class ObstacleSpawner : MonoBehaviour
     void Spawn(){
         int randObstacle = Random.Range(0, obstacles.Length);
 
-        Instantiate(obstacles[randObstacle], spawnPos, transform.rotation);
+        int randomSpot = Random.Range(0, 2); // 0 == .top, 1 == .bottom
+
+        spawnPos = transform.position;
+
+        if(randomSpot < 1){
+            //spawn at top
+
+            Instantiate(obstacles[randObstacle], spawnPos, transform.rotation);
+        }
+        else{
+            //spawn at bottom
+
+            spawnPos.y = -transform.position.y;
+
+            if(randObstacle == 1){
+                //spawn obstacle 2
+                spawnPos.x += 1;
+
+            }
+            else if(randObstacle == 2){
+                //spawn obstacle 3
+
+                spawnPos.x += 2;
+            }
+
+            GameObject obs = Instantiate(obstacles[randObstacle], spawnPos, transform.rotation);
+            obs.transform.eulerAngles = new Vector3(0, 0, 180);
+        }
     }
 }
