@@ -6,8 +6,13 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject MenuUI;
+    public GameObject GamePlayIU;
+    public GameObject spawner;
+
     public static GameManager instance;
     public bool gameStarted = false;
+
     public GameObject player;
 
     int lives = 2;
@@ -24,6 +29,10 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         gameStarted = true;
+
+        MenuUI.SetActive(false);
+        GamePlayIU.SetActive(true);
+        spawner.SetActive(true);
     }
 
     public void GameOver()
@@ -55,6 +64,11 @@ public class GameManager : MonoBehaviour
     {
         score++;
         ScoreText.text = "Score : " + score;
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 
 }

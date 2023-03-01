@@ -17,13 +17,20 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)){
-            //player position switch
-
-            playerYPos = -playerYPos;
-
-            transform.position = new Vector3(transform.position.x, playerYPos, transform.position.z);
+        if(GameManager.instance.gameStarted)
+        {
+            if (Input.GetMouseButtonDown(0)){
+                //player position switch
+                PositiomSwitch();    
+            }
         }
+    }
+
+    void PositiomSwitch()
+    {
+        playerYPos = -playerYPos;
+
+        transform.position = new Vector3(transform.position.x, playerYPos, transform.position.z);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
