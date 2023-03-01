@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class GameManager : MonoBehaviour
 
     int lives = 2;
     int score = 0;
+
+    public Text LivesText;
+    public Text ScoreText;
 
     private void Awake()
     {
@@ -43,14 +47,14 @@ public class GameManager : MonoBehaviour
         else
         {
             lives--;
-            print("lives : " + lives);
+            LivesText.text = "Lives : " + lives;
         }
     }
 
     public void UpdateScore()
     {
         score++;
-        print("score : " + score);
+        ScoreText.text = "Score : " + score;
     }
 
 }
