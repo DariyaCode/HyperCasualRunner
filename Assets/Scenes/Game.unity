@@ -911,6 +911,7 @@ GameObject:
   - component: {fileID: 970521971}
   - component: {fileID: 970521973}
   - component: {fileID: 970521972}
+  - component: {fileID: 970521974}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -980,6 +981,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 970521970}
   m_CullTransparentMesh: 1
+--- !u!111 &970521974
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970521970}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 86db077b6111141aa8597bc769478d3e, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 86db077b6111141aa8597bc769478d3e, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1115294212
 GameObject:
   m_ObjectHideFlags: 0
