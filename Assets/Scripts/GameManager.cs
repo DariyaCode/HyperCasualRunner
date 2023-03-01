@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public GameObject MenuUI;
     public GameObject GamePlayIU;
     public GameObject spawner;
+    public GameObject BGPartical;
 
     public static GameManager instance;
     public bool gameStarted = false;
@@ -33,6 +34,7 @@ public class GameManager : MonoBehaviour
         MenuUI.SetActive(false);
         GamePlayIU.SetActive(true);
         spawner.SetActive(true);
+        BGPartical.SetActive(true);
     }
 
     public void GameOver()
