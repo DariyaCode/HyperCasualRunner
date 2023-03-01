@@ -48,6 +48,7 @@ public class PlayerController : MonoBehaviour
             //GameManager.instance.GameOver();
 
             GameManager.instance.UpdateLives();
+            GameManager.instance.Shake();
         }
     }
 }
