@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
 
+    public GameObject particle;
+
     float playerYPos;
 
     // Start is called before the first frame update
@@ -19,6 +21,10 @@ public class PlayerController : MonoBehaviour
     {
         if(GameManager.instance.gameStarted)
         {
+            if (!particle.activeInHierarchy)
+            {
+                particle.SetActive(true);
+            }
             if (Input.GetMouseButtonDown(0)){
                 //player position switch
                 PositiomSwitch();    
